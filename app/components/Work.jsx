@@ -46,23 +46,24 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="grid grid-cols-auto my-10 gap-5 dark:text-black">
         {workData.map((project, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-          >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div>
-                <h2 className="font-semibold">{project.title}</h2>
-                <p className="text-sm text-gray-700">{project.description}</p>
+          <a href={project.repoLink} target="_blank" rel="noopener noreferrer" key={index}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+            >
+              <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                  <h2 className="font-semibold">{project.title}</h2>
+                  <p className="text-sm text-gray-700">{project.description}</p>
+                </div>
+                <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 translate-y-1">
+                  <Image src={assets.send_icon} alt="send icon" className="w-5" />
+                </div>
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 translate-y-1">
-                <Image src={assets.send_icon} alt="send icon" className="w-5" />
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </a>
         ))}
       </motion.div>
       <motion.a

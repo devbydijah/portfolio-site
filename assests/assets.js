@@ -78,24 +78,22 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
+        title: 'Weather app',
         description: 'Web Design',
         bgImage: '/work-1.png',
+        repoLink: "https://github.com/devbydijah/weather-app"
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Todo list app',
+        description: 'Web App',
         bgImage: '/work-2.png',
+        repoLink: "https://github.com/devbydijah/todo-list-tracker-app"
     },
     {
-        title: 'Photography site',
+        title: 'Basketball scoreboard app',
         description: 'Web Design',
         bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        repoLink: "https://github.com/devbydijah/basketball-scoreboard-app"
     },
 ]
 
