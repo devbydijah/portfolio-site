@@ -2,7 +2,7 @@ import { assets } from "@/assests/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
-const Navbar = ({isDarkMode, setIsDarkMode}) => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
 
@@ -36,7 +36,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
       >
         <a href="#top">
           <Image
-            src={ isDarkMode ? assets.logo_dark : assets.logo}
+            src={isDarkMode ? assets.logo_dark : assets.logo}
             alt=""
             className="w-28 cursor-pointer mr-14"
           />
@@ -133,7 +133,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
           </li>
         </ul>
       </nav>
-      );
     </>
   );
 };
